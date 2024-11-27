@@ -1,4 +1,4 @@
-package com.example.ManosApps;
+package com.example.ManosApps.Controller;
 
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;

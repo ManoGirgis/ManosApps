@@ -1,16 +1,19 @@
-package model;
+package com.example.ManosApps.model;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+@Entity
+@Table(name = "reservations")
 public class reservationModel {
 
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
    private int userId;
    private int room_number;
    private String reservation_date;
