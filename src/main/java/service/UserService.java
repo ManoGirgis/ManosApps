@@ -1,6 +1,6 @@
 package service;
 
-import model.usersModel;
+import model.UsersModel;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,15 +8,16 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 
 @Service
-public class userService {
+public class UserService {
     @Autowired
     private dao.UsersDao usersDao;
 
-    public ArrayList<usersModel> getuserbyname(String nombre){
-        return (ArrayList<usersModel>) usersDao.findByNombre(nombre);
+    public ArrayList<UsersModel> getuserbyname(String nombre){
+        return (ArrayList<UsersModel>) usersDao.findByNombre(nombre);
     }
 
-    public usersModel saveuser(usersModel usuario) {
+    public UsersModel saveuser(UsersModel usuario) {
         return usersDao.save(usuario);
     }
 }
+
