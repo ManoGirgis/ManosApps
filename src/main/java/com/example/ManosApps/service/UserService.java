@@ -20,15 +20,5 @@ public class UserService {
     public UsersModel saveuser(UsersModel usuario) {
         return usersDao.save(usuario);
     }
-
-    public void deleteuser(int id) {
-        usersDao.deleteById(id);
-    }
-    public UsersModel getuserbyid(int id){
-        return (UsersModel) usersDao.findByid(id);
-    }
-    public UsersModel updateuser(UsersModel usuario) {
-        return usersDao.update(usuario);
-    }
 }
 
